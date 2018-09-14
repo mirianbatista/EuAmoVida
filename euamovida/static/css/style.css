@@ -296,3 +296,102 @@ body {
     margin: 0%;
     top:100;
 }
+
+container {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 200px 200px;
+   }
+
+   .barra_log{background-color: crimson;
+    width: 0px;
+    height: 0px;
+    font-size: 10000px;
+    position: relative; 
+    top: 10px;
+    left: 50px;
+   }
+
+   .barra_menu{width: 0px;
+    height: 0px;
+    color:  #000000;
+    font-size: 20px;
+    position: relative;
+    top: 50px;
+    left: 200px;}
+    
+    .barra_menu2{width: 0px;
+        height: 0px;
+        color:  #000000;
+        font-size: 20px;
+        position: relative;
+        top: 50px;
+        left: 300px;}
+
+    .barra_menu3{width: 0px;
+        height: 0px;
+        color:  #000000;
+        font-size: 20px;
+        position: relative;
+        top: 50px;
+        left: 450px;}
+    
+    .barra_menu4{width: 0px;
+        height: 0px;
+        color:  #000000;
+        font-size: 20px;
+        position: relative;
+        top: 50px;
+        left: 630px;}
+    
+    .barra_menu5{width: 0px;
+        height: 0px;
+        color:  #000000;
+        font-size: 20px;
+        position: relative;
+        top: 50px;
+        left: 800px;}
+
+    .barra_menu6{width: 0px;
+        height: 0px;
+        color:  #000000;
+        font-size: 20px;
+        position: relative;
+        top: 50px;
+        left: 950px;}
+
+
+
+   .titulo{
+    font-size: 30px;
+    position: relative;
+    top: 150px;
+    left: 550px;
+   }
+
+   .descricao {
+    width: 400px;
+    height: 40px;
+    font-size: 22px;
+    position: relative;
+    top: 200px;
+    left: 200px;
+    }
+
+    .logo{width: 400px;
+        height: 40px;
+        font-size: 18px;
+        position: relative; 
+        top: 150px;
+        left: 0px;}
+
+   .content1{color: #7777ff}
+
+   .container {
+    display: grid;
+    grid-template-columns: 0fr 1fr 1fr;
+   } 
+
+
+
+
