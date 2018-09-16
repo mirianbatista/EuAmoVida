@@ -1,13 +1,15 @@
 <!doctype html>
+
+{% load staticfiles %}
+
+<html>
+
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="description" content="Eu Amo Vida">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/static/css/style.css">
-    <link rel="stylesheet" href="/static/fonts/minimal.ttf">
-    <link rel="stylesheet" href="/static/fonts/roboto.ttf">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <link rel="stylesheet" href="{% static "fonts/minimal.ttf" %}>"
+    <link rel="stylesheet" href="{% static "fonts/roboto.ttf" %}">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
@@ -15,8 +17,8 @@
 <body>
 
     <nav  class="navbar fixed-top navbar-expand-lg">
-        <a class="navbar-brand" href="home/index.html">
-            <img src="/static/images/eav.png" style="height: 180px;">
+        <a class="navbar-brand" href="/home">
+            <img src="{% static "images/eav.png" %}" style="height: 180px;">
         </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -24,25 +26,25 @@
             <div class="collapse navbar-collapse justify-content-center" class="w-25 p-3">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active scroll" href="home/index.html">Home</a>
+                            <a class="nav-link active scroll" href="/home">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active scroll" href="campanha2019/campanha2019.html">Campanha 2019</a>
+                            <a class="nav-link active scroll" href="/campanha2019">Campanha 2019</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link scroll" href="colabore/colabore.html">Colabore</a>
+                            <a class="nav-link scroll" href="/colabore/">Colabore</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link scroll" href="ondeestamos/ondeestamos.html">Onde Estamos</a>
+                            <a class="nav-link scroll" href="/ondeestamos">Onde Estamos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active scroll" href="sobre/sobre.html">Sobre</a>
+                            <a class="nav-link active scroll" href="/sobre">Sobre</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link scroll" href="contato/contato.html">Contato</a>
+                            <a class="nav-link scroll" href="/contato">Contato</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link scroll" href="lojinha/lojinha.html">Loja</a>
+                            <a class="nav-link scroll" href="/lojinha">Loja</a>
                         </li>
                 </ul>
             </div>
@@ -53,7 +55,7 @@
     </nav>
     
     <div class="fotona">
-        <img src="/static/images/capa.jpg" height="700" width="1286">
+        <img src="{% static "images/capa.jpg" %}" height="700" width="1286">
     </div>
 
     <div id="titulo" class="w-50 p-3">
