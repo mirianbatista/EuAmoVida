@@ -57,7 +57,46 @@
                 <i class="material-icons mat" style="font-size: 35px">shopping_cart</i>
             </div>
     </nav>
-    
+
+    <footer id="rodape">
+        <div class="cont-indiv">
+            <ul id="menufooter" class="navbar-nav" class="w-50 p-3">
+                        <li class="nav-item">
+                            <a class="nav-link active scroll" href="{% url 'euamovida-index' %}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active scroll" href="{% url 'euamovida-campanha2019' %}">Campanha 2019</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link scroll" href="{% url 'euamovida-colabore' %}">Colabore</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link scroll" href="{% url 'euamovida-ondeestamos' %}">Onde Estamos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active scroll" href="{% url 'euamovida-sobre' %}">Sobre</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link scroll" href="{% url 'euamovida-contato' %}">Contato</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link scroll" href="{% url 'euamovida-lojinha' %}">Loja</a>
+                        </li>
+            </ul>
+
+            <aside class="social-icon" class="cont-indiv">
+                <ul>
+                    <li><a href="https://www.facebook.com/projetoeuamovida/" target="_blank"><img src="{% static 'images/facebook.png' %}"></a></li>
+                    <li><a href="https://www.instagram.com/projetoeuamovida/" target="_blank"><img src="{% static 'images/instagram.png' %}"></a></li>
+                    <li><a href="https://twitter.com/projeuamovida" target="_blank"><img src="{% static 'images/twitter.png' %}"></a></li>
+                </ul>
+            </aside>
+        </div>
+        <div>
+            <h6 id="copyright">© Eu Amo Vida 2019</h6>
+        </div>
+    </footer>
+
     {% block conteudo %}{% endblock %}
 
     <script src="{% static 'euamovida/js/jquery.min.js' %}"></script>
