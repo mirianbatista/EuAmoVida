@@ -634,22 +634,20 @@ ul {
 #MariaFoto{
     grid-column:1;
     grid-row:1;
-    position: relative;
     text-align: center;
 }
 #MariaDescricao{
     grid-column: 1;
     grid-row: 2;
     text-align: center;
-    position: relative;
     color: #c90024;
     font-size: 20px;
+    margin-top: 200px;
 }
 #MariaRedeSocial{
     grid-column: 1;
     grid-row: 3;
     text-align: center;
-    position: relative;
 }
 #wagnerFoto{
     grid-column: 2;
@@ -663,14 +661,16 @@ ul {
     text-align: center;
     position: relative;
     color: #c90024;
-    font-size: 20px;    
+    font-size: 20px;   
+    margin-top: 200px; 
 }
 wagnerRedeSocial{
     grid-column: 2;
     grid-row: 3;
     text-align: center;
-    position: relative;
+    margin-right: 10px;
 }
+
 
 .formContato{
     position: absolute;
