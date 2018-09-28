@@ -629,7 +629,7 @@ ul {
     grid-template-columns: auto auto;
     grid-template-rows: 100px;
     grid-auto-flow: row dense;
-    margin-top: 50%;
+    margin-top: 35%;
 }
 #MariaFoto{
     grid-column:1;
@@ -664,9 +664,10 @@ ul {
     font-size: 20px;   
     margin-top: 200px; 
 }
-wagnerRedeSocial{
+#wagnerRedeSocial{
     grid-column: 2;
     grid-row: 3;
+    position: relative;
     text-align: center;
     margin-right: 10px;
 }
