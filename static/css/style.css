@@ -393,5 +393,13 @@ ul {
     margin-bottom: 20px;
 }
 
-
+.video{
+    width: 20%;
+    height: 50px;
+    margin-top: 20%;
+    float: left;
+    margin-left: 20%;
+    margin-bottom: 20px;
+    color: #c90024;
+}
 
