@@ -16,6 +16,19 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include
+from cg import views
+from riotinto import views
+from mamanguape import views
+from baia_marcacao import views
+from guarabira import views
+from itapororoca import views
+from jacarau import views
+from doe_sangue import views
+from doe_alimentos import views
+from doe_fraldas import views
+from doe_cereais import views
+from seja_voluntario import views
+from compre_camisa import views
 
 urlpatterns = [
     path('home/', include('home.urls')),
@@ -25,7 +38,22 @@ urlpatterns = [
     path('sobre/', include('sobre.urls')),
     path('contato/', include('contato.urls')),
     path('lojinha/', include('lojinha.urls')),
+    path('cg/', include('cg.urls')),
+    path('riotinto/', include('riotinto.urls')),
+    path('mamanguape/', include('mamanguape.urls')),
+    path('baia_marcacao/', include('baia_marcacao.urls')),
+    path('itapororoca/', include('itapororoca.urls')),
+    path('jacarau/', include('jacarau.urls')),
+    path('guarabira/', include('guarabira.urls')),
+    path('doe_sangue/', include('doe_sangue.urls')),
+    path('doe_alimentos/', include('doe_alimentos.urls')),
+    path('doe_fraldas/', include('doe_fraldas.urls')),
+    path('doe_cereais/', include('doe_cereais.urls')),
+    path('compre_camisa/', include('compre_camisa.urls')),
+    path('seja_voluntario/', include('seja_voluntario.urls')),
     path('', include('produtos.urls')),
     path('admin/', admin.site.urls),
 
 ]
+
+
