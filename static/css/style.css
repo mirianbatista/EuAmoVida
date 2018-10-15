@@ -29,6 +29,10 @@ body{
     color: #c90024;
 }
 
+#carrinho-icon:hover {
+    color: #c90024;
+}
+
 #navbarDropdownMenuLink > dropdown-toggle:after {
     font-family: FontAwesome;
     content: '\f107';
@@ -292,12 +296,17 @@ li.timeline-inverted, li.timeline-normal {
 }
 
 #Titulo {
+    width: 680px;
     font-size: 40px;
-    position: relative;
-    left:28%;
     color:#c90024;
     font-weight: bold;
+    position: absolute;
+    margin-left: 21%;
+    margin-top: 7%;
+    text-align: center;
 }
+
+
 
 h4 {
     position: relative;
@@ -661,8 +670,8 @@ h4 {
     width: 20%;
     height: 50px;
     float: center;
-    margin-top: 20%;
-    margin-left: 20%;
+    margin-top: 17%;
+    margin-left: 17%;
     margin-bottom: 20px;
     color: #c90024;
 }
@@ -835,4 +844,22 @@ h4 {
     margin-bottom: 20px;
 }
 
+#carrinho {
+    position: absolute;
+    margin-left: 10%;
+    margin-top: 14%;
+    width: 80%;
+}
+
+#subtotal {
+    position: absolute;
+    margin-top: 47%;
+    margin-left: 80%;
+    font-weight: bolder;
+}
+
+.btn, btn-danger {
+    background-color: #9c0024;
+
+}
 

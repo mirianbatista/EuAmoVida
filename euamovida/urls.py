@@ -29,6 +29,7 @@ from doe_fraldas import views
 from doe_cereais import views
 from seja_voluntario import views
 from compre_camisa import views
+from carrinho import views
 
 urlpatterns = [
     path('home/', include('home.urls')),
@@ -51,6 +52,7 @@ urlpatterns = [
     path('doe_cereais/', include('doe_cereais.urls')),
     path('compre_camisa/', include('compre_camisa.urls')),
     path('seja_voluntario/', include('seja_voluntario.urls')),
+    path('carrinho/', include('carrinho.urls')),
     path('', include('produtos.urls')),
     path('admin/', admin.site.urls),
 

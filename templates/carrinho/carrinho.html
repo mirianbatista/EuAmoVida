@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}Carrinho{% endblock %}
+
+{% block conteudo %}
+
+<h1 id="Titulo">Seu carrinho</h1>
+
+<table class="table" id="carrinho">        
+        <thead class="thead-dark" align="center">        
+            <tr>
+                <th colspan="2">Produto</th>
+                <th>Preço</th>
+                <th>Quantidade</th>
+                <th>Total</th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody align="center">
+            <tr>
+                <td colspan="2" align="left">
+                    <img src="{% static 'images/camisa.jpg' %}" height="90" width="90" align="left">
+                    <div>
+                        <h6><br>&nbsp;&nbsp;Camisa 2019<br>&nbsp;&nbsp;Azul<br>&nbsp;&nbsp;Babylook P</h6>
+                    </div>
+                </td>
+                <td>R$25,00</td>
+                <td>1</td>
+                <td>R$25,00</td>
+                <td>x</td>
+            </tr>
+        </tbody>
+
+        <tbody align="center">
+            <tr>
+                <td colspan="2" align="left">
+                    <img src="{% static 'images/copo.jpg' %}" height="90" width="90" align="left">
+                    <div>
+                        <h6><br>&nbsp;&nbsp;Copo 2019<br>&nbsp;&nbsp;Vermelho<br></h6>
+                    </div>
+                </td>
+                <td>R$10,00</td>
+                <td>2</td>
+                <td>R$20,00</td>
+                <td>x</td>
+            </tr>
+        </tbody>
+
+        <tbody align="center">
+            <tr>
+                <td colspan="2" align="left">
+                    <img src="{% static 'images/caneta.jpg' %}" height="90" width="90" align="left">
+                    <div>
+                        <h6><br>&nbsp;&nbsp;Caneta cacto</h6>
+                    </div>
+                </td>
+                <td>R$3,00</td>
+                <td>4</td>
+                <td>R$12,00</td>
+                <td>x</td>
+            </tr>
+        </tbody>
+</table>
+
+<div id="subtotal">
+    <h6>Subtotal&nbsp;&nbsp;&nbsp;&nbsp;R$57,00</h6>
+</div> 
+
+<button type="button" class="btn btn-danger" style="position: absolute; margin-top: 51%; margin-left: 65%">Escolha mais produtos</button>   
+<button type="button" class="btn btn-danger" style="position: absolute; margin-top: 51%; margin-left: 81%">Fechar pedido</button>   
+
+{% endblock %}
