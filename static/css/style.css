@@ -1372,3 +1372,52 @@ h4 {
     margin-left: 33%;
     
 }
+
+
+.detalhe-produto {
+    position: absolute;
+    margin-top: 8%;
+    margin-left: 13%;
+}
+
+.detalhe-titulo {
+    font-size: 50px;
+    color:#c90024;
+    margin-left: 110%;
+    margin-top: -98%;
+    font-family: 'minimal';
+    font-weight: bold;
+    width: 90%;
+}
+
+.detalhe-preco {
+    margin-left: 110%;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.detalhe-textinho {
+    position: absolute;
+    margin-left: 47%;
+    margin-top: 17%;
+    font-size: 20px;
+    font-family: 'roboto';
+    text-align: justify;
+    width: 50%;
+}
+
+.detalhe-quantidade {
+     position: absolute;
+     margin-top: 28%; 
+     margin-left:47%;
+     background-color: #9c0024;
+     color: #fff;
+     width: 70px;
+     height: 50px;
+     padding: 0;
+     border: none;
+     box-shadow: none;
+     border-radius: 5px;
+     text-align: center;
+     font-size: 25px;
+}
