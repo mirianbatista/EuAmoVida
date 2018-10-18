@@ -5,5 +5,6 @@ class Produto(models.Model):
     preco = models.DecimalField(max_digits=9,decimal_places=2)
     quantidade = models.IntegerField()
     imagem = models.ImageField(upload_to= 'images')
+    link = models.URLField(max_length=200, default="")
     def __str__(self):
         return self.descricao
