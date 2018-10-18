@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% load static %}
+
 {% block title %}Compre camisas{% endblock %}
 
 {% block conteudo %}
@@ -7,15 +9,15 @@
 <h1 id="Titulo">Compre Camisas</h1>
 
 <div id="Camisa">
-    <div id="foto1"><img src="/static/images/1.jpg" height="450" width="1100"></div>
+    <div id="foto1"><img src="{% static 'images/1.jpg' %}" height="450" width="1100"></div>
     <div id="texto">Este ano oferecemos 3 estampas, dando diferentes opções para que você declare <br> junto conosco que ainda há muito caminho a percorrer! Garanta a Sua já!</div>
 </div>
-    <div id="camisafoto4"><img src="/static/images/2.jpg" height="450" width="450"></div>
+    <div id="camisafoto4"><img src="{% static 'images/2.jpg' %}" height="450" width="450"></div>
     <div id="texto">Nossas crianças também fazem parte deste amor que só cresce. <br> Por isto, este ano não seria diferente das campanhas <br> anteriores: também teremos uma camisa com <br> estampa, exclusivamente fofa, para as nossas pequenas!
 
        <br> Garanta já a sua e vem amar a vida com a gente!</div>
 </div>
-    <div id="camisafoto5"><img src="/static/images/3.jpg" height="450" width="450"></div>
+    <div id="camisafoto5"><img src="{% static 'images/3.jpg' %}" height="450" width="450"></div>
     <div id="texto">Vestir a camisa do amor diz muito sobre você.
 
         Diz sobre o seu coração!<br>

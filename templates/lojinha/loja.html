@@ -11,29 +11,12 @@
 {%  for produto in produtos %}
 
 <div id="cidades" style="position: relative;margin-top: 5%">
-		<div id="mamanguapeFoto"><img src="{% static 'images/camisa.jpg' %}" height="300" width="300"></div>
+		<div id="mamanguapeFoto"><img src="{{ produto.imagem.url }}" height="300" width="300"></div>
+		
         <div id="nomeMMG"><a href="{% url 'euamovida-camisa' %}"style="font-size: 35px; color:#c90024; text-decoration:none;">{{ produto.descricao }}</a></div>
         <div id="botaoMMG">{{ produto.preco }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+</div>
 
-        <div id="RioTintoFoto"><img src="{% static 'images/copo.jpg' %}" height="300" width="300"></div>
-        <div id="nomeRT"><a href="{% url 'euamovida-copo' %}"style="font-size: 35px; color:#c90024; text-decoration:none;">{{ produto.descricao }}</a></div>
-        <div id="botaoRT">{{ produto.preco }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+</div>
-
-        <div id="guarabiraFoto"><img src="{% static 'images/caneca.jpg' %}" height="300" width="300"></div>
-        <div id="nomeGBA"><a href="{% url 'euamovida-caneca' %}"style="font-size: 35px; color:#c90024; text-decoration:none;">{{ produto.descricao }}</a></div>
-        <div id="botaoGBA">{{ produto.preco }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+</div>
-
-        <div id="baiatraicao_marcacaoFoto"><img src="{% static 'images/adesivo.jpg' %}" height="300" width="300"></div>
-        <div id="nomeBTMR"><a href="{% url 'euamovida-adesivo' %}"style="font-size: 35px; color:#c90024; text-decoration:none;">{{ produto.descricao }}</a></div>
-        <div id="botaoBTMR">{{ produto.preco }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+</div>
-
-        <div id="itapororocaFoto"><img src="{% static 'images/unha.jpg' %}" height="300" width="300"></div>
-        <div id="nomeITA"><a href="{% url 'euamovida-unha' %}"style="font-size: 35px; color:#c90024; text-decoration:none;">{{ produto.descricao }}</a></div>
-        <div id="botaoITA">{{ produto.preco }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+</div>
-
-        <div id="jacarauFoto"><img src="{% static 'images/caneta.jpg' %}" height="300" width="300"></div>
-        <div id="nomeJA"><a href="{% url 'euamovida-caneta' %}"style="font-size: 35px; color:#c90024; text-decoration:none;">{{ produto.descricao }}</a></div>
-        <div id="botaoJA">{{ produto.preco }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+</div>
+        
 </div>
 
 {% endfor %}

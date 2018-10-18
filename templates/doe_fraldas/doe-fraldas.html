@@ -1,12 +1,14 @@
 {% extends "base.html" %}
 
+{% load static %}
+
 {% block title %}Doe fraldas{% endblock %}
 
 {% block conteudo %}
 <h1 id="Titulo">Doe Fraldas</h1>
 
 <div id="DoeFraldas">
-    <div id="foto1"><img src="/static/images/5.jpg" height="700" width="1000"></div>
+    <div id="foto1"><img src="{% static 'images/5.jpg' %}" height="700" width="1000"></div>
     <div id="texto">Esse ano o Eu Amo Vida também tem como meta a arrecadação de <br> 200 pacotes de fraldas, que serão doadas à pacientes com câncer. <br>
         Vem amar a vida junto com a gente e ajudar a semear o bem!</div>
     

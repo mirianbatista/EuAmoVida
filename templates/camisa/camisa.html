@@ -7,9 +7,9 @@
 {% block conteudo %}
 
 <div class="detalhe-produto">
-	<div class="detalhe-foto"><img src="{% static 'images/camisa.jpg' %}" height="400" width="400"></div>
-	<div class="detalhe-titulo">Camisa 2019</div>
-	<div class="detalhe-preco">R$25,00</div>
+	<div class="detalhe-foto"><img src="{{ produto.imagem.url.0 }}" height="400" width="400"></div>
+	<div class="detalhe-titulo">{{ produto.descricao.0 }}</div>
+	<div class="detalhe-preco">{{ produto.preco.0 }}</div>
 </div>
 <div class="detalhe-textinho"><br><br>As nossas camisas são 100% algodão, o que ajuda nesse calor, só compra!</div>
 <div>
