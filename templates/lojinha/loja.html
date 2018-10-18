@@ -13,7 +13,7 @@
 <div id="cidades" style="position: relative;margin-top: 5%">
 		<div id="mamanguapeFoto"><img src="{{ produto.imagem.url }}" height="300" width="300"></div>
 		
-        <div id="nomeMMG"><a href="{% url 'euamovida-camisa' %}"style="font-size: 35px; color:#c90024; text-decoration:none;">{{ produto.descricao }}</a></div>
+        <div id="nomeMMG"><a href="{{ produto.link }}" style="font-size: 35px; color:#c90024; text-decoration:none;">{{ produto.descricao }}</a></div>
         <div id="botaoMMG">{{ produto.preco }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+</div>
 
         
