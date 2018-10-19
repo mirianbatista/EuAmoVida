@@ -2,7 +2,7 @@
 
 {% load static %}
 
-{% block title %}Adesivo{% endblock %}
+{% block title %}{{produto.descricao}}{% endblock %}
 
 {% block conteudo %}
 
@@ -11,7 +11,7 @@
 	<div class="detalhe-titulo">{{ produto.descricao }}</div>
 	<div class="detalhe-preco">{{ produto.preco }}</div>
 </div>
-<div class="detalhe-textinho"><br><br>Além de espalhar amor, você deixará seu celular ou computador muito fofinho ao comprar nossos adesivos. Vem amar a vida com a gente!</div>
+<div class="detalhe-textinho"><br><br>As nossas camisas são 100% algodão, o que ajuda nesse calor, só compra!</div>
 <div>
 	<input type="number" class="detalhe-quantidade" class="input-text qty text" step="1" min="1" max="" value="1" title="Quantidade" size="2" inputmode="numeric">
 </div>
