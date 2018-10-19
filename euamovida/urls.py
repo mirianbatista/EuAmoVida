@@ -29,13 +29,6 @@ from doe_fraldas import views
 from doe_cereais import views
 from seja_voluntario import views
 from compre_camisa import views
-from camisa import views
-from caneta import views
-from caneca import views
-from adesivo import views
-from unha import views
-from copo import views
-from chaveiro import views
 from carrinho import views
 from django.conf import settings
 from django.conf.urls.static import static
@@ -62,14 +55,6 @@ urlpatterns = [
     path('compre_camisa/', include('compre_camisa.urls')),
     path('seja_voluntario/', include('seja_voluntario.urls')),
     path('carrinho/', include('carrinho.urls')),
-    path('chaveiro/', include('chaveiro.urls')),
-    path('copo/', include('copo.urls')),
-    path('caneca/', include('caneca.urls')),
-    path('adesivo/', include('adesivo.urls')),
-    path('camisa/', include('camisa.urls')),
-    path('caneta/', include('caneta.urls')),
-    path('unha/', include('unha.urls')),
-    path('', include('produtos.urls')),
     path('admin/', admin.site.urls),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
