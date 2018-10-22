@@ -1,11 +1,5 @@
 Django==2.1
--e git://github.com/bergantine/django-events.git@e4cd597ad4ed73a5d21fcca00aae956dc0f30cda#egg=django_events
-django-scheduler==0.8.8
 dj-databse-url==0.4.1
 gunicorn==19.4.5
-pipenv==2018.10.13
 psycopg2==2.6.1
-unicodecsv==0.14.1
-urllib3==1.22
-virtualenv==16.0.0
 
