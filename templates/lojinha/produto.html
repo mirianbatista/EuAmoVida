@@ -15,6 +15,6 @@
 <div>
 	<input type="number" class="detalhe-quantidade" class="input-text qty text" step="1" min="1" max="" value="1" title="Quantidade" size="2" inputmode="numeric">
 </div>
-<button type="button" class="btn btn-danger" style="position: absolute; margin-top: 28%; margin-left: 54%; font-family: 'minimal'; font-weight: bold; font-size: 25px;">- COMPRAR +</button>   
+<a href="{% url 'create_cartitem' produto.id %}" role="button" class="btn btn-danger" style="position: absolute; margin-top: 28%; margin-left: 54%; font-family: 'minimal'; font-weight: bold; font-size: 25px;">COMPRAR</button>   
 
 {% endblock %}

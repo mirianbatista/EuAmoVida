@@ -60,6 +60,7 @@ INSTALLED_APPS = [
     'seja_voluntario',
     'compre_camisa',
     'carrinho',
+    'checkout',
 ]
 
 MIDDLEWARE = [
