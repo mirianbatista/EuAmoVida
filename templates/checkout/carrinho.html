@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}Carrinho{% endblock %}
+
+{% block conteudo %}
+
+<h1 id="Titulo">Seu carrinho</h1>
+
+<div class="container">
+    <form class="" action="" method="post">
+        {{ formset.management_form }}
+        <table class="table" id="carrinho">  
+            <thead class="thead-dark" align="center">        
+                <tr>
+                    <th colspan="2">Produto</th>
+                    <th>Preço</th>
+                    <th>Quantidade</th>
+                    <th></th>
+                </tr>
+            </thead>
+            
+            {% for form in formset %}
+            <tbody align="center">
+                <tr>
+                    <td colspan="2" align="left">
+                        <img src="{{ form.instance.produto.imagem.url }}" height="140" width="140">
+                        <h5>&nbsp;&nbsp;{{ form.instance.produto.descricao }}</h5>
+                    </td>
+                    <td>{{ form.instance.preco }}</td>
+                    <td>{{ form.instance.quantidade }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</div>
+{% endfor %}
+
+
+<a href="{% url 'euamovida-lojinha' %}" role="button" class="btn btn-danger" style="position: absolute; margin-top: 11%; margin-left: 55%;">Escolha mais produtos</button> 
+<button type="button" class="btn btn-danger" style="position: absolute; margin-top: -4%; margin-left: 71%">Fechar pedido</button>   
+
+{% endblock %}
+
+
+                

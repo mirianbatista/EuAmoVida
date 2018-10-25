@@ -1,6 +1,8 @@
 from django.shortcuts import render, get_object_or_404
-from django.views.generic import RedirectView
+from django.views.generic import RedirectView, TemplateView 
+from django.forms import modelformset_factory
 from django.contrib import messages
+from django.urls import reverse
 
 from lojinha.models import Produto
 
@@ -19,6 +21,28 @@ class CreateCartItemView(RedirectView):
 			messages.success(self.request, 'Produto add com sucesso!')
 		else:
 			messages.success(self.request, 'Produto att com sucesso!')
-		return produto.get_absolute_url()
+		return reverse('cart_item')
+
+class CartItemView(TemplateView):
+
+	template_name = 'checkout/carrinho.html'
+
+	def get_context_data(self, **kwargs):
+		context = super(CartItemView, self).get_context_data(**kwargs)
+		CartItemFormSet = modelformset_factory(
+			CartItem, fields=('quantidade',), can_delete=True, extra=0
+		)
+		session_key = self.request.session.session_key
+		if session_key:
+			context['formset'] = CartItemFormSet(
+				queryset = CartItem.objects.filter(cart_key=session_key)
+			)
+		else:
+			context['formset'] = CartItemFormSet(queryset=CartItem.objects.none())
+		return context
+
+def index(request):
+	return render(request, 'checkout/carrinho.html')
 
 create_cartitem = CreateCartItemView.as_view()
+cart_item = CartItemView.as_view()
