@@ -9,12 +9,10 @@
 <div class="detalhe-produto">
 	<div class="detalhe-foto"><img src="{{ produto.imagem.url }}" height="400" width="400"></div>
 	<div class="detalhe-titulo">{{ produto.descricao }}</div>
-	<div class="detalhe-preco">{{ produto.preco }}</div>
+	<div class="detalhe-preco">R${{ produto.preco }}</div>
 </div>
-<div class="detalhe-textinho"><br><br>As nossas camisas são 100% algodão, o que ajuda nesse calor, só compra!</div>
-<div>
-	<input type="number" class="detalhe-quantidade" class="input-text qty text" step="1" min="1" max="" value="1" title="Quantidade" size="2" inputmode="numeric">
-</div>
-<a href="{% url 'create_cartitem' produto.id %}" role="button" class="btn btn-danger" style="position: absolute; margin-top: 28%; margin-left: 54%; font-family: 'minimal'; font-weight: bold; font-size: 25px;">COMPRAR</button>   
+<div class="detalhe-textinho"><br><br>{{ produto.textinho }}</div>
+<a href="{% url 'create_cartitem' produto.id %}" role="button" class="btn btn-danger" class="detalhe-quantidade" style="position: absolute; margin-top: 24%; margin-left: 47%; font-family: 'minimal'; font-weight: bold; font-size: 25px;">COMPRAR</button>   
 
 {% endblock %}
+

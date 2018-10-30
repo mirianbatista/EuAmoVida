@@ -1,4 +1,5 @@
 from django.template import Library
+from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 
 register = Library()
 

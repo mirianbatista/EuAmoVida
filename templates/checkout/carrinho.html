@@ -8,7 +8,7 @@
 
 <h1 id="Titulo">Seu carrinho</h1>
 
-<div class="container">
+<div class="container" style="margin-left: -1%">
     <form class="" action="" method="post">
         {% csrf_token %}
         {{ formset.management_form }}
@@ -43,9 +43,10 @@
 </div>
 
 
-<a href="{% url 'euamovida-lojinha' %}" role="button" class="btn btn-danger" style="position: absolute; margin-top: 8%; margin-left: 17%;">Escolha mais produtos</button> 
-<button type="button" class="btn btn-danger" style="position: absolute; margin-top: -4%; margin-left: 387%">Fechar pedido</button> 
-<button type="button" class="btn btn-danger" style="position: absolute; margin-top: -4%; margin-left: 298%">Atualizar pedido</button> 
+<a href="{% url 'euamovida-lojinha' %}" role="button" class="btn btn-danger" style="position: absolute; margin-top: 8%; margin-left: 10%;">Escolha mais produtos</button>
+<button type="button" class="btn btn-danger" style="position: absolute; margin-top: -4%; margin-left: 305%">Atualizar pedido</button>  
+<button type="button" class="btn btn-danger" style="position: absolute; margin-top: -4%; margin-left: 388%">Fechar pedido</button> 
+
 
 
 {% endblock %}

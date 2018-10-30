@@ -1,7 +1,5 @@
 {% extends "base.html" %}
 
-{% load pagination %}
-
 {% load static %}
 
 {% block title %}Loja{% endblock %}
@@ -10,18 +8,33 @@
 
 <h1 id="Titulo">Lojinha Eu Amo Vida</h1>
 
-{%  for produto in produtos %}
 
-<div id="cidades" style="position: relative;margin-top: 5%">
-		<div id="mamanguapeFoto"><img src="{{ produto.imagem.url }}" height="300" width="300"></div>
-		
-        <div id="nomeMMG"><a href="{% url 'euamovida-produto' produto.id %}" style="font-size: 35px; color:#c90024; text-decoration:none;">{{ produto.descricao }}</a></div>
-        <div id="botaoMMG">{{ produto.preco }}</div>
-        {% endfor %}
-
+<div class="row" style="width: 80%; margin-left: 10%; margin-top: 15%">
+	{%  for produto in produtos %}
+	<div class="col-sm-6 col-md-4">
+		<div class="thumbnail">
+			<a href="{% url 'euamovida-produto' produto.id %}">
+				<img src="{{ produto.imagem.url }}" height="300" width="300">
+			</a>
+			<div class="caption" align="center">
+				<a href="{% url 'euamovida-produto' produto.id %}" style="font-size: 35px; color:#c90024; text-decoration:none;">{{ produto.descricao }}</a>
+				<h2> R$ {{ produto.preco }}</h2>
+				<a href="{% url 'create_cartitem' produto.id %}" role="button" class="btn btn-danger" style="font-family: 'minimal'; font-weight: bold; font-size: 25px;">COMPRAR</a>
+			</div>
+		</div>
+	</div>
+	{% endfor %}
 </div>
-
-{% pagination request paginator page_obj %}
-
+<div class="row">
+	<div class="col-md-12">
+		<nav>
+			<ul class="pagination">
+				{% for page in paginator.page_range %}
+				<li><a href="?page={{ page }}">{{ page }}</a></li>
+				{% endfor %}
+			</ul>
+		</nav>
+	</div>
+</div>
 {% endblock %}
 

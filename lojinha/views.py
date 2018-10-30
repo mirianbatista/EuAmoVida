@@ -1,5 +1,14 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+from django.views import generic
 from .models import Produto
+
+class ProductListView(generic.ListView):
+	model = Produto
+	template_name = 'lojinha/loja.html'
+	context_object_name = 'produtos'
+	paginate_by = 3
+
+loja = ProductListView.as_view()
 
 def lista_produtos(request):
     produtos = Produto.objects.all()
