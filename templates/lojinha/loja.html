@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% load pagination %}
+
 {% load static %}
 
 {% block title %}Loja{% endblock %}
@@ -14,11 +16,12 @@
 		<div id="mamanguapeFoto"><img src="{{ produto.imagem.url }}" height="300" width="300"></div>
 		
         <div id="nomeMMG"><a href="{% url 'euamovida-produto' produto.id %}" style="font-size: 35px; color:#c90024; text-decoration:none;">{{ produto.descricao }}</a></div>
-        <div id="botaoMMG">{{ produto.preco }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+</div>
+        <div id="botaoMMG">{{ produto.preco }}</div>
+        {% endfor %}
 
-        
 </div>
 
-{% endfor %}
+{% pagination request paginator page_obj %}
+
 {% endblock %}
 

@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse
+from django.views import generic
 
 class Produto(models.Model):
     descricao = models.CharField(max_length=150)
@@ -20,3 +21,9 @@ class Produto(models.Model):
 
     def get_absolute_url(self):
         return reverse('euamovida-produto', kwargs={'produto_id': self.id})
+
+class CategoryListView(generic.ListView):
+
+    template_name = 'lojinha/loja.html'
+    context_object_name = 'loja'
+    paginate_by = 3

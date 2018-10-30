@@ -30,3 +30,12 @@ class CartItem(models.Model):
 
 	def __str__(self):
 		return '{} [{}]'.format(self.produto, self.quantidade)
+
+
+def post_save_cart_item(instance, **kwargs):
+	if instance.quantidade < 1:
+		instance.delete()
+
+models.signals.post_save.connect(
+	post_save_cart_item, sender=CartItem, dispatch_uid='post_save_cart_item'
+)
