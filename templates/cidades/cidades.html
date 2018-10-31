@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}Onde Estamos{% endblock %}
+
+{% block conteudo %}
+
+<h1 id="Titulo">Onde Estamos</h1>
+
+
+<div class="row" style="width: 90%; margin-left: 7%; margin-top: 15%">
+	{%  for cidade in cidades %}
+	<div class="col-sm-6 col-md-4">
+		<div class="thumbnail" align="center">
+			<a href="{% url 'euamovida-cidade' cidade.id %}">
+				<img src="{{ cidade.foto_cidade.url }}" height="300" width="300">
+			</a>
+			<div class="caption">
+				<a href="{% url 'euamovida-cidade' cidade.id %}" style="font-size: 25px; text-align: justify; color:#c90024; text-decoration:none;">{{ cidade.nome }}</a>
+				<h2 style="font-size: 15px; text-align: justify;">{{ cidade.subtitulo }}</h2>
+				<a href="{% url 'euamovida-cidade' cidade.id %}" role="button" class="btn btn-danger" style="font-family: 'minimal'; font-weight: bold; font-size: 18px;">LEIA MAIS</a>
+			</div>
+		</div>
+	</div>
+	{% endfor %}
+</div>
+<div class="row">
+	<div class="col-md-12" style="width:15%; position: absolute; margin-left: 85%;font-size: 35px;">
+		<nav>
+			<ul class="pagination">
+				{% for page in page_obj.paginator.page_range %}
+				<li><a href="?page={{ page }}" role="button" class="btn btn-danger" style="font-family: 'minimal'; font-weight: bold; font-size: 25px;">{{ page }}</a></li>
+				{% endfor %}
+			</ul>
+		</nav>
+	</div>
+</div>
+{% endblock %}
+

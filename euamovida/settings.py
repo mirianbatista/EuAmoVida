@@ -40,17 +40,9 @@ INSTALLED_APPS = [
     'home',
     'campanha2019',
     'colabore',
-    'ondeestamos',
     'sobre',
     'contato',
     'lojinha',
-    'cg',
-    'mamanguape',
-    'riotinto',
-    'baia_marcacao',
-    'itapororoca',
-    'jacarau',
-    'guarabira',
     'doe_sangue',
     'doe_alimentos',
     'doe_fraldas',
@@ -59,6 +51,7 @@ INSTALLED_APPS = [
     'compre_camisa',
     'checkout',
     'widget_tweaks',
+    'cidades',
 ]
 
 MIDDLEWARE = [

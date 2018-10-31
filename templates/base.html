@@ -52,19 +52,14 @@
                               <li><a class="dropdown-item" href="{% url 'euamovida-seja-voluntario' %}">Seja um voluntário</a></li>
                             </ul>
                         </li> 
-
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="{% url 'euamovida-ondeestamos' %}" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Onde Estamos</a>
+                            <a class="nav-link dropdown-toggle" href="{% url 'euamovida-cidades' %}" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Onde Estamos</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                              <li><a class="dropdown-item" href="{% url 'euamovida-mamanguape' %}">Mamanguape</a></li>
-                              <li><a class="dropdown-item" href="{% url 'euamovida-rio-tinto' %}">Rio Tinto</a></li>
-                              <li><a class="dropdown-item" href="{% url 'euamovida-guarabira' %}">Guarabira</a></li>
-                              <li><a class="dropdown-item" href="{% url 'euamovida-baia-marcacao' %}">Baía da Traição/Marcação</a></li>
-                              <li><a class="dropdown-item" href="{% url 'euamovida-itapororoca' %}">Itapororoca</a></li>
-                              <li><a class="dropdown-item" href="{% url 'euamovida-jacarau' %}">Jacaraú</a></li>
-                              <li><a class="dropdown-item" href="{% url 'euamovida-cg' %}">Campina Grande</a></li>
+                              {%  for cidade in cidades %}
+                              <li><a class="dropdown-item" href="{% url 'euamovida-cidade' cidade.id %}">{{ cidade.nome }}</a></li>
+                              {% endfor %}
                             </ul>
-                        </li>     
+                        </li> 
                         <li class="nav-item">
                             <a class="nav-link active scroll" href="{% url 'euamovida-sobre' %}">Sobre</a>
                         </li>
@@ -106,15 +101,15 @@
                         </li> 
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="{% url 'euamovida-ondeestamos' %}" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Onde Estamos</a>
+                            <a class="nav-link dropdown-toggle" href="{% url 'euamovida-cidades' %}" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Onde Estamos</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                              <li><a class="dropdown-item" href="{% url 'euamovida-mamanguape' %}">Mamanguape</a></li>
-                              <li><a class="dropdown-item" href="{% url 'euamovida-rio-tinto' %}">Rio Tinto</a></li>
-                              <li><a class="dropdown-item" href="{% url 'euamovida-guarabira' %}">Guarabira</a></li>
-                              <li><a class="dropdown-item" href="{% url 'euamovida-baia-marcacao' %}">Baía da Traição/Marcação</a></li>
-                              <li><a class="dropdown-item" href="{% url 'euamovida-itapororoca' %}">Itapororoca</a></li>
-                              <li><a class="dropdown-item" href="{% url 'euamovida-jacarau' %}">Jacaraú</a></li>
-                              <li><a class="dropdown-item" href="{% url 'euamovida-cg' %}">Campina Grande</a></li>
+                              <li><a class="dropdown-item" href="#">Mamanguape</a></li>
+                              <li><a class="dropdown-item" href="#">Rio Tinto</a></li>
+                              <li><a class="dropdown-item" href="#">Guarabira</a></li>
+                              <li><a class="dropdown-item" href="#">Baía da Traição/Marcação</a></li>
+                              <li><a class="dropdown-item" href="#">Itapororoca</a></li>
+                              <li><a class="dropdown-item" href="#">Jacaraú</a></li>
+                              <li><a class="dropdown-item" href="#">Campina Grande</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">

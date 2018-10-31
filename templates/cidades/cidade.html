@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}{{cidade.nome}}{% endblock %}
+
+{% block conteudo %}
+
+<h1 id="Titulo">{{ cidade.nome }}</h1>
+
+<div class="container">
+	<div class="row" id="cidade-top">
+        <div class="col-md-5"><img src="{{ cidade.foto_cidade.url }}" height="460" width="460"></div>
+        <div class="col-md-7" style="margin-top: 20%">
+        	<div><h1>{{ cidade.titulo }}</h1></div>
+        	<div><h3>{{ cidade.subtitulo }}</h3></div>
+        </div>    
+    </div>
+    <div class="row" id="cidade-bottom">
+    	<div class="col-md-6">
+        	<div>{{ cidade.textinho }}</div> 
+    	</div>
+    	<div class="col-md-6">
+	        <div class="row">
+		        <div class="col-md-6"><img src="{{ cidade.puzzle1.url }}" height="210" width="284"></div>
+		        <div class="col-md-6"><img src="{{ cidade.puzzle2.url }}" height="210" width="284"></div>
+		    </div>
+	        <div class="row" style="padding-top: 5px;">
+		        <div class="col-md-6"><img src="{{ cidade.puzzle3.url }}" height="208" width="284"></div>
+		        <div class="col-md-6"><img src="{{ cidade.puzzle4.url }}" height="208" width="284"></div>  
+		    </div>
+	    </div>
+    </div> 
+</div>
+{% endblock %}
