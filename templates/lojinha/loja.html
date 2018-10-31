@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+
+
 {% load static %}
 
 {% block title %}Loja{% endblock %}
@@ -26,11 +28,11 @@
 	{% endfor %}
 </div>
 <div class="row">
-	<div class="col-md-12">
+	<div class="col-md-12" style="width:15%; position: absolute; margin-left: 85%;font-size: 35px;">
 		<nav>
 			<ul class="pagination">
-				{% for page in paginator.page_range %}
-				<li><a href="?page={{ page }}">{{ page }}</a></li>
+				{% for page in page_obj.paginator.page_range %}
+				<li><a href="?page={{ page }}" role="button" class="btn btn-danger" style="font-family: 'minimal'; font-weight: bold; font-size: 25px;">{{ page }}</a></li>
 				{% endfor %}
 			</ul>
 		</nav>
