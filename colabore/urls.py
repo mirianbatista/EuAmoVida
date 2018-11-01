@@ -1,6 +1,9 @@
 from django.urls import path
-from colabore import views
+from .views import lista_doacoes, exibir_doacao, colabore
+
 
 urlpatterns = [
-    path('', views.index, name='euamovida-colabore'),
+path('', colabore, name = 'euamovida-colabore'),
+path('doacao/<int:doacao_id>', exibir_doacao, name='euamovida-doacao')
+
 ]

@@ -16,12 +16,6 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include
-from doe_sangue import views
-from doe_alimentos import views
-from doe_fraldas import views
-from doe_cereais import views
-from seja_voluntario import views
-from compre_camisa import views
 from django.conf import settings
 from django.conf.urls.static import static
 from cidades import views
@@ -33,12 +27,6 @@ urlpatterns = [
     path('sobre/', include('sobre.urls')),
     path('contato/', include('contato.urls')),
     path('lojinha/', include('lojinha.urls')),
-    path('doe_sangue/', include('doe_sangue.urls')),
-    path('doe_alimentos/', include('doe_alimentos.urls')),
-    path('doe_fraldas/', include('doe_fraldas.urls')),
-    path('doe_cereais/', include('doe_cereais.urls')),
-    path('compre_camisa/', include('compre_camisa.urls')),
-    path('seja_voluntario/', include('seja_voluntario.urls')),
     path('checkout/', include('checkout.urls')),
     path('cidades/', include('cidades.urls')),
     path('admin/', admin.site.urls),

@@ -41,24 +41,11 @@
                         <li class="nav-item">
                             <a class="nav-link active scroll" href="{% url 'euamovida-campanha2019' %}">Campanha 2019</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="{% url 'euamovida-colabore' %}" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Colabore</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                              <li><a class="dropdown-item" href="{% url 'euamovida-doe-sangue' %}">Doe sangue</a></li>
-                              <li><a class="dropdown-item" href="{% url 'euamovida-doe-alimentos' %}">Doe alimentos</a></li>
-                              <li><a class="dropdown-item" href="{% url 'euamovida-doe-fraldas' %}">Doe fraldas</a></li>
-                              <li><a class="dropdown-item" href="{% url 'euamovida-doe-cereais' %}">Doe cereais</a></li>
-                              <li><a class="dropdown-item" href="{% url 'euamovida-compre-camisa' %}">Compre camisas</a></li>
-                              <li><a class="dropdown-item" href="{% url 'euamovida-seja-voluntario' %}">Seja um voluntário</a></li>
-                            </ul>
-                        </li> 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="{% url 'euamovida-cidades' %}" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Onde Estamos</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                              {%  for cidade in cidades %}
-                              <li><a class="dropdown-item" href="{% url 'euamovida-cidade' cidade.id %}">{{ cidade.nome }}</a></li>
-                              {% endfor %}
-                            </ul>
+                        <li class="nav-item">
+                            <a class="nav-link active scroll" href="{% url 'euamovida-colabore' %}">Colabore</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active scroll" href="{% url 'euamovida-cidades' %}">Onde Estamos</a>
                         </li> 
                         <li class="nav-item">
                             <a class="nav-link active scroll" href="{% url 'euamovida-sobre' %}">Sobre</a>
@@ -88,29 +75,11 @@
                         <li class="nav-item">
                             <a class="nav-link active scroll" href="{% url 'euamovida-campanha2019' %}">Campanha 2019</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="{% url 'euamovida-colabore' %}" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Colabore</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                              <li><a class="dropdown-item" href="{% url 'euamovida-doe-sangue' %}">Doe sangue</a></li>
-                              <li><a class="dropdown-item" href="{% url 'euamovida-doe-alimentos' %}">Doe alimentos</a></li>
-                              <li><a class="dropdown-item" href="{% url 'euamovida-doe-fraldas' %}">Doe fraldas</a></li>
-                              <li><a class="dropdown-item" href="{% url 'euamovida-doe-cereais' %}">Doe cereais</a></li>
-                              <li><a class="dropdown-item" href="{% url 'euamovida-compre-camisa' %}">Compre camisas</a></li>
-                              <li><a class="dropdown-item" href="{% url 'euamovida-seja-voluntario' %}">Seja um voluntário</a></li>
-                            </ul>
-                        </li> 
-
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="{% url 'euamovida-cidades' %}" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Onde Estamos</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                              <li><a class="dropdown-item" href="#">Mamanguape</a></li>
-                              <li><a class="dropdown-item" href="#">Rio Tinto</a></li>
-                              <li><a class="dropdown-item" href="#">Guarabira</a></li>
-                              <li><a class="dropdown-item" href="#">Baía da Traição/Marcação</a></li>
-                              <li><a class="dropdown-item" href="#">Itapororoca</a></li>
-                              <li><a class="dropdown-item" href="#">Jacaraú</a></li>
-                              <li><a class="dropdown-item" href="#">Campina Grande</a></li>
-                            </ul>
+                        <li class="nav-item">
+                            <a class="nav-link active scroll" href="{% url 'euamovida-colabore' %}">Colabore</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active scroll" href="{% url 'euamovida-cidades' %}">Onde Estamos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active scroll" href="{% url 'euamovida-sobre' %}">Sobre</a>
