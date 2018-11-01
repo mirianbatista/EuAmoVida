@@ -18,7 +18,7 @@ class CartItem(models.Model):
 	cart_key = models.CharField('Chave do carrinho', max_length=40, db_index=True)
 	produto = models.ForeignKey('lojinha.Produto', verbose_name='Produto', on_delete=models.CASCADE)
 	quantidade = models.PositiveIntegerField('Quantidade', default=1)
-	preco = models.DecimalField(max_digits=9,decimal_places=2)
+	preco = models.DecimalField('Preço', max_digits=9,decimal_places=2)
 
 	objects = CartItemManager()
 	

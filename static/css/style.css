@@ -466,6 +466,7 @@ h4 {
 
 #quantidade {
     width: 30%;
+    text-align: center;
 }
 
 #cidade-top {
@@ -483,3 +484,9 @@ h4 {
     text-align: justify;
 }
 
+#mensagem {
+    position: absolute;
+    margin-top: 5%;
+    margin-left: 10%;
+    font-size: 15px;
+}
